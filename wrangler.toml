@@ -1,0 +1,13 @@
+name = "tunl"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-05-23"
+minify = true
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[env.dev]
+build = { command = "cargo install -q worker-build && worker-build --dev" }
+
+[vars]
+UUID = "369594b7-592e-4541-8045-b2d84200391d"
